@@ -1,0 +1,29 @@
+.HomeBg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.HomeBtn {
+    position: absolute;
+    left: calc(50% - 60px);
+    top: calc(50% - 25px);
+    width: 120px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #0f8929;
+    color: white;
+    border: 1px solid white;
+    font-size: 18px;
+}
+.HomeBtn:hover{
+    background-color: rgb(124, 158, 3);
+}
+.tittle{
+    position: absolute;
+    left:28%;
+    top: 30%;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(166, 255, 0);
+}

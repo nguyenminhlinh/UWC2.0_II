@@ -1,0 +1,261 @@
+@property --p {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 240);
+
+  --employeeHeight: 60%;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  /* top: 0; */
+  height: 69px;
+  background: gray;
+}
+
+.main-page {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 70px);
+  top: 69px;
+  bottom: 0;
+}
+
+.left {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  left: 0;
+  border-top: 1px solid gray;
+}
+
+.right {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+  width: 25%;
+}
+/* 
+.right-inside {
+  position: relative;
+  width: calc(100%-10px);
+  height: 100%;
+} */
+
+.employee {
+  justify-content: space-between;
+  height: 60%;
+  position: relative;
+}
+
+.task-table {
+  position: absolute;
+  width: calc(100% - 22px);
+  /* height: calc(100%-44px); */
+  border-radius: 4px;
+  border: 1px solid grey;
+  margin-left: 10px;
+  margin-right: 10px;
+  bottom: 0;
+}
+
+.row {
+  display: flex;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+}
+
+.column {
+  position: relative;
+  display: block;
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: auto;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+
+.employee-image {
+  width: 28%;
+}
+
+/* .div-employee-image {
+  position: absolute;
+  width: 100%;
+  height: calc(60%-20px);
+} */
+
+.imgnpc {
+  position: absolute;
+  /* display:30%; */
+  height: 70%;
+  width: 70%;
+  left:15%;
+  
+}
+
+.employee-description {
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  width: calc(100% - 20px);
+}
+
+.employee-name {
+  text-align: center;
+  width: 100%;
+}
+
+.employee-description-ul {
+  width: 100%;
+}
+
+.employee-name > h4 {
+  margin: 2px;
+}
+
+.employee-name > p {
+  margin: 2px;
+}
+
+.employee-description-ul {
+  border-top: 1px solid grey;
+  list-style-type: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.kpi {
+  width: 28%;
+}
+
+.kpi-title {
+  position: relative;
+}
+
+.kpi-kpi {
+  display: inline-block;
+  margin: 2px 50px 2px 2px;
+}
+
+.kpi-time {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.kpi-time-button {
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 16px;
+  background: white;
+}
+
+.kpi-time-button:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.kpi-current {
+  background-color: #7ed957;
+}
+
+.empty {
+  width: 29%;
+  margin-right: 0;
+}
+
+.task-title {
+  display: inline-block;
+  width: 100%;
+  margin: 4px 0;
+}
+
+.task-title > h1 {
+  margin: 6px 0;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 6px 0;
+  border-top: 1px solid grey;
+}
+
+.task-infor-header {
+  display: inline-block;
+  padding: 4px 20px;
+  /* width: px; */
+}
+
+.task-infor {
+  display: inline-block;
+  padding: 4px 40px;
+}
+
+.task-infor-button-red {
+  background: none;
+  border: white;
+  margin-left: 12px;
+  color: red;
+}
+
+.task-infor-button-red:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.task-infor-button-green {
+  background: none;
+  border: white;
+  margin-left: 12px;
+  color: green;
+}
+
+.task-infor-button-green:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.calendar {
+  height: 40%;
+}
+
+.chat-boxx {
+  height: 60%;
+}

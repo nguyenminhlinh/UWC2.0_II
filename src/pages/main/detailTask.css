@@ -1,0 +1,115 @@
+.detail-task {
+  position: absolute;
+  left: 25px;
+  top: 12px;
+  right: 0;
+  bottom: 0;
+}
+
+.detail-task-header {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-task-header > h1 {
+  padding: 0 40px;
+  margin: 0;
+}
+
+.detail-button-back {
+  border: none;
+  /* width: 32px;
+    height: 32px; */
+  background: none;
+  padding: 0px;
+}
+
+.icon-back {
+  background: rgb(219, 214, 214);
+}
+
+.detail-button-back:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.grid-container {
+  /* padding: 32px 0; */
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  padding: 4px 0;
+}
+
+.list-MCP {
+  /* padding-left: 18px; */
+  /* margin: 0; */
+}
+
+.map-mcps {
+  /* width: 100%; */
+  position: relative;
+  height: 200px;
+  width: calc(100%-25px);
+}
+
+.image-map {
+  position: absolute;
+  width: calc(100% - 25px);
+  height: 100px;
+}
+
+.detail-task-confirm {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  /* width: 100%; */
+}
+
+.confirm-button {
+  /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; */
+  /* bottom: 30px; */
+  position: absolute;
+  width: 100%;
+  /* max-width: 100%; */
+}
+
+.cancel {
+  position: absolute;
+  border: none;
+  border-radius: 8px;
+  left: 25px;
+  height: 40px;
+  width: 100px;
+  color: blanchedalmond;
+  /* width: calc(50% - 30px); */
+  padding: 0;
+}
+
+.confirm {
+  position: absolute;
+  border: none;
+  border-radius: 8px;
+  right: 50px;
+  height: 40px;
+  width: 100px;
+  color: blanchedalmond;
+  /* width: calc(50% - 30px); */
+  padding: 0;
+}
+
+.confirm-button > button:hover {
+  cursor: pointer;
+  opacity: 70%;
+}

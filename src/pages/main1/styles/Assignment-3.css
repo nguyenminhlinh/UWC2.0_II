@@ -1,0 +1,70 @@
+/* Vehicle list */
+.VehicleList {
+    left: 0;
+    top: 69px;
+    position: absolute;
+    width: 75%;
+    border-top: 1px solid black;
+}
+
+.VehicleHead {
+    display: grid;
+    grid-template-columns: 23% 23% 17% 17% 20%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    color: black;
+    background-color: #baf4c7;
+    padding: 5px 0px;
+}
+
+.VehicleBody {
+    width: 90%;
+    margin: 0px 5% 0px 5%;
+    padding: 0;
+}
+
+.VehicleRow {
+    text-align: left;
+    background-color: white;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 23% 23% 17% 17% 20%;
+    padding: 20px 0px;
+}
+.VehicleRow:hover {
+    border: 1px solid #cb6ce6;
+    margin-top: -1px;
+    z-index: 1;
+}
+
+.VehicleColumn {
+    margin-left: 20px;
+}
+.VehicleColumnRed {
+    margin-left: 20px;
+    color: #ff914d;
+}
+.VehicleColumnGreen {
+    margin-left: 20px;
+    color: #7ed957;
+}
+
+/* Assignment sidebar */
+.AssignSidebar3 {
+    height: calc(100% - 70px);
+    width: 25%;
+    position: fixed; 
+    top : 69px;
+    right: 0;
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+}
+
+.SidebarImg {
+    width: calc(100% - 50px);
+    height: auto;
+    margin-bottom: 10px;
+}

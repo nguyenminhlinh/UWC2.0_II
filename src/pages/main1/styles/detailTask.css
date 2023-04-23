@@ -1,0 +1,66 @@
+.detail-task-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.detail-task-header > h1 {
+    padding: 0 100px;
+    margin: 0;
+}
+
+.detail-button-back{
+    border: none;
+    /* background:none; */
+}
+
+.detail-button-back:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.grid-container {
+    padding: 32px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item {
+    padding: 4px 0;
+}
+
+.list-MCP {
+    padding-left: 18px;
+    /* margin: 0; */
+}
+
+.map-mcps {
+    width: 100%;
+    height: 200px;
+}
+
+.detail-task-confirm {
+    width: 100;
+}
+
+.confirm-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.confirm-button > button {
+    padding: 12px 48px;
+    border: none;
+    border-radius: 8px;
+    color: blanchedalmond;
+}
+
+.confirm-button > button:hover{
+    cursor: pointer;
+    opacity: 70%;
+}

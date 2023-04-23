@@ -1,0 +1,174 @@
+.Calendar {
+    left: 0;
+    top: 69px;
+    position: fixed;
+    width: 75%;
+    border-top: black 1px solid;
+}
+
+.Branch {
+    height: 16px;
+}
+
+/* month display and control */
+.MonthControl {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    font-size: 22px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 16px;
+    margin-bottom: 9px;
+}
+
+.MonthArrowBack {
+    padding: 7px 8px;
+    transition-duration: 0.2s;
+    display: flex;
+}
+.MonthArrowBack:hover {
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
+.MonthArrowForward {
+    padding: 7px 8px;
+    transition-duration: 0.2s;
+    display: flex;
+    transform: rotate(180deg);
+}
+.MonthArrowForward:hover {
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
+
+/* calendar content */
+.SevenColGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid #d9d9d9;
+    border-bottom: 0px;
+}
+
+.HeadDay {
+    text-align: center;
+    background-color: #baf4c7;
+    padding: 5px 0px;
+    border: 2px solid transparent;
+    border-color: #d9d9d9;
+}
+
+.CalendarBody {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 80%;
+    margin-left: 10%;
+    background-color: #d9d9d9;
+    border: 2px solid #d9d9d9;
+}
+
+.DayStyle {
+    text-align: center;
+    padding: 5px;
+    height: 85px;
+    border: 2px solid;
+    background-color: white;
+    border-color: #d9d9d9;
+}
+.DayStyle:hover {
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1;
+    position:relative;
+    margin: -10px -10px -10px -10px;
+    height: 105px;
+    filter: drop-shadow(15px 25px 1.2em rgba(0, 0, 0, 0.911));
+    border: 0;
+    transition-duration: 0.2s;
+}
+.DayStyleActive {
+    text-align: center;
+    padding: 5px;
+    height: 85px;
+    border: 2px solid #d9d9d9;
+    background-color: #baf4c7;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+/* sidebar content */
+.Sidebar {
+    height: calc(100% - 70px);
+    width: 25%;
+    position: fixed; 
+    top : 69px;
+    right: 0;
+    /* display: flex; */
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+}
+
+.SidebarList {
+    color: black;
+    text-align: left;
+    font-size: 18px;
+    list-style-type: none;
+    margin-left: -15px; /* bullet size: 40px */
+    margin-bottom: 5px;
+    line-height: 2.5;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: calc(100% - 35px);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.SidebarList:hover {
+    filter: drop-shadow(0 0 2em #adffb8aa);
+    background-color: #7ed957;
+}
+.SidebarListActive {
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    list-style-type: none;
+    line-height: 2.5;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: calc(100% - 35px);
+    margin-left: -15px; /* bullet size: 40px */
+    margin-bottom: 5px;
+    background-color: #7ed957;
+    cursor: pointer;
+}
+
+.BackArrow {
+    padding: 7px 8px;
+    transition-duration: 0.2s;
+    margin-left: 25px;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: -61px;
+    display: flex;
+}
+.BackArrow:hover {
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
+
+.SidebarButton {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    background-color: #7ed957;
+    border-radius: 10px;
+    padding: 5px;
+    width: calc(100% - 50px);
+    height: 40px;
+    right: 25px;
+    bottom: 30px;
+    position: absolute;
+}

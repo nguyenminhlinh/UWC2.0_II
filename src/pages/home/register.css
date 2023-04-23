@@ -1,0 +1,111 @@
+
+
+
+
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .img{
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  .form-heading {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  label[for="Code"] {
+    position: relative;
+    top: 10px;
+  }
+  input[name="Mã code"]{
+    position:relative;
+    top: 10px;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  input[type="number"]
+  {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+/* border-color: red; */
+    border-color: #4c4cff;
+  }
+  
+  .submit-btn {
+    background-color: #15df26;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block;
+    
+    margin-bottom: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #759900;
+  }
+  .success {
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
+
+.success-message {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.failure {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.failure-message {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}

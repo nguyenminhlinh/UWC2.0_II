@@ -148,7 +148,7 @@ export const Calendar = () => {
               <b>Nhân viên phụ trách:</b>
             </span>
             <span>
-              CAA01
+              CAA001
             </span>
 
             <span>
@@ -179,12 +179,13 @@ export const Calendar = () => {
             </span>
           </div>
         </form>
-          <a href="/assignment">
+          {/* <a href="/assignment">
 
             <button className='SidebarButton' href="/assignment"> 
               <b>Chỉnh sửa</b>
             </button>
-          </a>
+          </a> */}
+
         </Fragment>
       )
     }

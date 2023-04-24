@@ -12,35 +12,35 @@ const ListJanitor = [
         role: "Janitor1",
         name: "JAA001",
         week: 'Tuần 9',
-        imgSource: img1,
+        imgSource: img4,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T01',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '12/03/2022',
                 state: 'Đã hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '14/03/2022',
                 state: 'Đã hoàn thành'
             },
             {
-                nameTask: 'TC03',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T03',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '15/03/2022',
                 state: 'Chưa hoàn thành'
             },
         ],
-        process: '66%',
+        process: '67%',
         infor: {
             name: "JAA001",
             id: "JAA001",
             mail: 'abc@gmail.com',
-            avatarSource: img1,
+            avatarSource: img4,
             phoneNumber: "012345678",
             position: "Collector",
             joinDate: "1/1/2023"
@@ -50,24 +50,24 @@ const ListJanitor = [
         role: "Janitor2",
         name: "JAA002",
         week: 'Tuần 9',
-        imgSource: img2,
+        imgSource: img3,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T01',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '13/03/2022',
                 state: 'Chưa hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '14/03/2022',
                 state: 'Chưa hoàn thành'
             },
             {
-                nameTask: 'TC03',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T03',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '14/03/2022',
                 state: 'Đã hoàn thành'
@@ -78,7 +78,7 @@ const ListJanitor = [
             name: "JAA002",
             id: "JAA002",
             mail: 'xyz@gmail.com',
-            avatarSource: img2,
+            avatarSource: img3,
             phoneNumber: "012345678",
             position: "Collector",
             joinDate: "1/1/2023"
@@ -88,17 +88,17 @@ const ListJanitor = [
         role: "Janitor3",
         name: "JAA003",
         week: 'Tuần 9',
-        imgSource: img3,
+        imgSource: img2,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO103 ', 'AO104'],
+                nameTask: 'T01',
+                MCPs: ['A03 ', 'AO4'],
                 vehicles: 'CO03',
                 time: '13/03/2022',
                 state: 'Chưa hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['AO101 ', 'A02'],
                 vehicles: 'CO03',
                 time: '14/03/2022',
                 state: 'Đã hoàn thành'
@@ -109,7 +109,7 @@ const ListJanitor = [
             name: "JAA003",
             id: "JAA003",
             mail: 'efh@gmail.com',
-            avatarSource: img3,
+            avatarSource: img2,
             phoneNumber: "012345678",
             position: "Collector",
             joinDate: "1/1/2023"
@@ -119,17 +119,17 @@ const ListJanitor = [
         role: "Janitor4",
         name: "JAA004",
         week: 'Tuần 9',
-        imgSource: img4,
+        imgSource: img1,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T01',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '17/03/2022',
                 state: 'Đã hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '18/03/2022',
                 state: 'Đã hoàn thành'
@@ -140,7 +140,7 @@ const ListJanitor = [
             name: "JAA004",
             id: "JAA004",
             mail: 'khj@gmail.com',
-            avatarSource: img4,
+            avatarSource: img1,
             phoneNumber: "012345678",
             position: "Collector",
             joinDate: "1/1/2023"
@@ -183,16 +183,15 @@ const ListMainJanitor = () => {
                 
                 <div className="main-page">
                     <div className="left">
-                        <ul className="list-header">
-                            <li className="list-header-item">
-                                Janitor
-                                
-                            </li>
-                            <li className="list-header-item">Task tham gia</li>
-                            <li className="list-header-item">MCPs</li>
-                            <li className="list-header-item">Phương tiện</li>
-                            <li className="list-header-item">Tiến độ</li>
-                        </ul>     
+                        <b>
+                            <ul className="list-header">
+                                <li className="list-header-item">Janitor</li>
+                                <li className="list-header-item">Task tham gia</li>
+                                <li className="list-header-item">MCPs</li>
+                                <li className="list-header-item">Phương tiện</li>
+                                <li className="list-header-item">Tiến độ</li>
+                            </ul>
+                        </b>
                         {
                             ListJanitor.map((janitor, index) => 
                                 <>

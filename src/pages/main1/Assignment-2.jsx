@@ -4,11 +4,12 @@ import backArrow from './assets/backArrow.png';
 import mcpImg from './assets/mcp.png';
 
 import './styles/Assignment-2.css'
+import { flushSync } from "react-dom";
 
 export const Assignment_2 = ({setState}) => {
   const [onDraw, setOnDraw] = useState(false);
   const [onPlaceMcp, setOnPlaceMcp] = useState(false);
-  const [selectedMap, setSelectedMap] = useState(51);
+  const [selectedMap, setSelectedMap] = useState(1);
 
   const mcpList = [
     {
@@ -37,7 +38,7 @@ export const Assignment_2 = ({setState}) => {
       "y": 47,
     }
   ]
-  const [selectedMcp, setSelectedMcp] = useState([true, true, true, false, false]);
+  const [selectedMcp, setSelectedMcp] = useState(Array(mcpList.length).fill(false));
 
   const {
     canvasRef,
@@ -75,6 +76,7 @@ export const Assignment_2 = ({setState}) => {
   useEffect(() => {
     prepareCanvas();
   }, []);
+
   const enableMcp = ( index ) => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -87,8 +89,6 @@ export const Assignment_2 = ({setState}) => {
   }
 
   const mapContent = () => {
-   
-
     return (
       <Fragment>
         {/* month navigator */}
@@ -163,7 +163,7 @@ export const Assignment_2 = ({setState}) => {
                 setOnDraw(false);
               }}
             >
-              <b>+ Add a MCP</b>
+              <b>+ Thêm một MCP</b>
             </li>
           </ul>
         <button className='AssignmentButtonBack' onClick={() => setState(1)}>

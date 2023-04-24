@@ -3,7 +3,7 @@ import './chat.css';
 import {FiSend} from 'react-icons/fi';
 
 const Chat = () => {
-  const [messages, setMessages] = useState([{ sender: 'Collector', message: 'hi' }]);
+  const [messages, setMessages] = useState([{ sender: 'Back officer', message: 'hi' }]);
   const [newMessage, setNewMessage] = useState('');
 
   const handleInputChange = (e) => {

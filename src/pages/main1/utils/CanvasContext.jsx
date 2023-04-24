@@ -54,15 +54,15 @@ export const CanvasProvider = ({ children }) => {
     contextRef.current = context;
 
     // draw the prior mcps
-    const image2 = new Image();
-    image2.src = mcp;
-    image2.onload = () => {
-      mcpList.map((item, index) => {
-        if(index < 3) {
-          context.drawImage(image2, item["x"], item["y"], 60, 50);
-        }
-      })
-    };
+    // const image2 = new Image();
+    // image2.src = mcp;
+    // image2.onload = () => {
+    //   mcpList.map((item, index) => {
+    //     if(index < 3) {
+    //       context.drawImage(image2, item["x"], item["y"], 60, 50);
+    //     }
+    //   })
+    // };
   };
 
   const startDrawing = ({ nativeEvent }) => {

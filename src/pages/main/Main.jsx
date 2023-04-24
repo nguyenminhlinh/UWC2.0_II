@@ -20,27 +20,35 @@ export const EmployeeInformation = [{
     linkAcess: 'asfasfsdf',
     kpi: 66,
     tasks: [{
-        nameTask: 'TC01',
-        MCPs: ['AO101 ', 'AO102'],
+        nameTask: 'T01',
+        MCPs: ['A01 ', 'A02'],
         vehicles: 'CO01',
         time: '12/03/2022',
-        state: 'Đã hoàn thành'
+        state: 1,
     },
     {
-        nameTask: 'TC02',
-        MCPs: ['AO101 ', 'AO102'],
+        nameTask: 'T02',
+        MCPs: ['A01 ', 'A02'],
         vehicles: 'CO01',
         time: '14/03/2022',
-        state: 'Đã hoàn thành'
+        state: 1,
+    },
+    {
+        nameTask: 'T03',
+        MCPs: ['A01 ', 'A02'],
+        vehicles: 'CO01',
+        time: '17/03/2022',
+        state: 0,
     },]
 }]
 
 
 const Main = () => {
+    const [employee, setEmployee] = useState(EmployeeInformation[0].tasks);
+    const [taskIndex, setTaskIndex] = useState(0);
+
     const [displayRight, setDisplayRight] = useState(1);
-    const [checkout, setCheckout] = useState(0); 
-    const [confirm, setConfirm] = useState('Chưa hoàn thành');
-    const [progress, setProgress] = useState(66);
+    const [progress, setProgress] = useState(2);
 
     const sidebarContent = () => {
         if (displayRight===1) 
@@ -55,7 +63,8 @@ const Main = () => {
         else 
             return (
                 <div className="right">
-                    <DetailTask setDisplayRight={setDisplayRight} setCheckout={setCheckout} setConfirm={setConfirm} setProgress={setProgress}/>
+                    {/* <DetailTask setDisplayRight={setDisplayRight} setCheckout={setCheckout} setConfirm={setConfirm} progress={progress} setProgress={setProgress}/> */}
+                    <DetailTask setDisplayRight={setDisplayRight} employee={employee} setEmployee={setEmployee} taskIndex={taskIndex} progress={progress} setProgress={setProgress}/>
                 </div>
             )
     }
@@ -105,7 +114,7 @@ const Main = () => {
                                             {Employee.kpi}%
                                         </div> */}
                                         <div style={{ width: `70%`, height: `auto`, margin: `15%`}}>
-                                            <CircularProgressbar value={progress} text={`${progress}%`} styles={buildStyles({
+                                            <CircularProgressbar value={progress * 100 / employee.length} text={`${Math.round(progress * 100 / employee.length)}%`} styles={buildStyles({
                                                 pathColor: '#7ED957',
                                                 textColor: '#7ED957'
                                             })} />
@@ -119,34 +128,38 @@ const Main = () => {
                                     <div className="task-title">
                                         <h1>Task tham gia</h1>
                                     </div>
-                                    <ul className="task">
-                                        <li className="task-infor-header">Nhiệm vụ</li>
-                                        <li className="task-infor-header">MCPs</li>
-                                        <li className="task-infor-header">Phương tiện</li>
-                                        <li className="task-infor-header">Thời gian</li>
-                                        <li className="task-infor-header">Trạng thái</li>
-                                    </ul>
-                                    { Employee.tasks.map((task, i) => 
+                                    <b>
+                                        <ul className="task">
+                                            <li className="task-infor-header">Nhiệm vụ</li>
+                                            <li className="task-infor-header">MCPs</li>
+                                            <li className="task-infor-header">Phương tiện</li>
+                                            <li className="task-infor-header">Thời gian</li>
+                                            <li className="task-infor-header">Trạng thái</li>
+                                        </ul>
+                                    </b>
+                                    { employee.map((task, i) => 
                                         <>
                                             <ul className="task">
                                                 <li className="task-infor">{task.nameTask}</li>
                                                 <li className="task-infor">{task.MCPs}</li>
                                                 <li className="task-infor">{task.vehicles}</li>
                                                 <li className="task-infor">{task.time}</li>
-                                                <button className="task-infor task-infor task-infor-button-green"
-                                            onClick = {() => setDisplayRight(2)} >{task.state}</button>
+                                                <button 
+                                                    className={task.state === 0 ? "task-infor task-infor-button-red" : "task-infor task-infor-button-green"} 
+                                                    onClick = {() => {
+                                                        setTaskIndex(i);
+                                                        setDisplayRight(2);
+                                                        // checkout === 0 ? setConfirm('Chưa hoàn thành') : setConfirm('Đã hoàn thành');
+                                                        // task.state = confirm;   
+                                                    }} 
+                                                >
+                                                <b>{task.state===1 ? "Đã hoàn thành" : "Đang chờ xác nhận"}</b>
+                                                </button>
                                             </ul>
                                         </>
                                         )
                                     }
-                                    <ul className="task">
-                                                <li className="task-infor">TC03</li>
-                                                <li className="task-infor">AO101 AO102</li>
-                                                <li className="task-infor">CO01</li>
-                                                <li className="task-infor">15/03/2022</li>
-                                                <button className={ checkout === 0 ? "task-infor task-infor-button-red" : "task-infor task-infor-button-green"}
-                                            onClick = {() => setDisplayRight(2)} >{confirm}</button>
-                                    </ul>
+                                    
                                 </div>
                         </div>
                             {sidebarContent()}

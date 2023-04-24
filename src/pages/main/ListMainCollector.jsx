@@ -14,28 +14,28 @@ const ListCollector = [
         week: 'Tuần 9',
         imgSource: img1,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T01',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '12/03/2022',
                 state: 'Đã hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '14/03/2022',
                 state: 'Đã hoàn thành'
             },
             {
-                nameTask: 'TC03',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T03',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '15/03/2022',
                 state: 'Chưa hoàn thành'
             },
         ],
-        process: '66%',
+        process: '67%',
         infor: {
             name: "CAA001",
             id: "CAA001",
@@ -52,22 +52,22 @@ const ListCollector = [
         week: 'Tuần 9',
         imgSource: img2,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T01',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '13/03/2022',
                 state: 'Chưa hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '14/03/2022',
                 state: 'Chưa hoàn thành'
             },
             {
-                nameTask: 'TC03',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T03',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '14/03/2022',
                 state: 'Đã hoàn thành'
@@ -90,15 +90,15 @@ const ListCollector = [
         week: 'Tuần 9',
         imgSource: img3,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO103 ', 'AO104'],
+                nameTask: 'T01',
+                MCPs: ['A03 ', 'A04'],
                 vehicles: 'CO03',
                 time: '13/03/2022',
                 state: 'Chưa hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO03',
                 time: '14/03/2022',
                 state: 'Đã hoàn thành'
@@ -121,15 +121,15 @@ const ListCollector = [
         week: 'Tuần 9',
         imgSource: img4,
         tasks: [{
-                nameTask: 'TC01',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T01',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '17/03/2022',
                 state: 'Đã hoàn thành'
             },
             {
-                nameTask: 'TC02',
-                MCPs: ['AO101 ', 'AO102'],
+                nameTask: 'T02',
+                MCPs: ['A01 ', 'A02'],
                 vehicles: 'CO01',
                 time: '18/03/2022',
                 state: 'Đã hoàn thành'
@@ -183,16 +183,18 @@ const ListMainCollector = () => {
                 
                 <div className="main-page">
                     <div className="left">
-                        <ul className="list-header">
-                            <li className="list-header-item">
-                                Collector
-                                
-                            </li>
-                            <li className="list-header-item">Task tham gia</li>
-                            <li className="list-header-item">MCPs</li>
-                            <li className="list-header-item">Phương tiện</li>
-                            <li className="list-header-item">Tiến độ</li>
-                        </ul>     
+                        <b>
+                            <ul className="list-header">
+                                <li className="list-header-item">
+                                    Collector
+                                    
+                                </li>
+                                <li className="list-header-item">Task tham gia</li>
+                                <li className="list-header-item">MCPs</li>
+                                <li className="list-header-item">Phương tiện</li>
+                                <li className="list-header-item">Tiến độ</li>
+                            </ul>
+                        </b>
                         {
                             ListCollector.map((collector, index) => 
                                 <>

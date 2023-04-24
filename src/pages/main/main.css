@@ -206,10 +206,11 @@
 }
 
 .task {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   width: 100%;
   margin: 0;
@@ -220,12 +221,14 @@
 .task-infor-header {
   display: inline-block;
   padding: 4px 20px;
+  text-align: center;
   /* width: px; */
 }
 
 .task-infor {
   display: inline-block;
   padding: 4px 40px;
+  text-align: center;
 }
 
 .task-infor-button-red {
